@@ -2,8 +2,9 @@ SimpleLogin::Application.routes.draw do
 
   resources :posts
 
-  devise_for :users
+  devise_for :users, :path_names => {:sign_in => 'login'}
 
+  match "/auth/:provider/callback" => "sessions#create"  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

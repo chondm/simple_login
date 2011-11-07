@@ -2,12 +2,18 @@
 <html>
 <head>
   <title>SimpleLogin</title>
+
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<% if current_user %>
+    Welcome, <%= current_user.name %>!
+  <% else %>
+    <%= link_to "Sign in with Twitter", "/auth/twitter" %>
+  <% end %>
+    
 <%= yield %>
 
 </body>
