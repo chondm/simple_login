@@ -4,7 +4,7 @@ gem 'rails', '3.1.1'
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
-
+gem 'nifty-generators'
 gem "mysql2"
 gem 'jquery-rails'
 gem 'devise'
@@ -12,6 +12,7 @@ gem 'execjs'
 gem 'therubyracer'
 
 gem "omniauth"
+
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -39,3 +40,4 @@ group :test do
   # Pretty printed test output
   gem 'turn', :require => false
 end
+gem "mocha", :group => :test
